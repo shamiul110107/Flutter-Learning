@@ -9,7 +9,7 @@ class SecondPage extends StatelessWidget {
         title: const Text("2nd Page"),
         backgroundColor: Colors.blue,
       ),
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.red,
     );
   }
 }
