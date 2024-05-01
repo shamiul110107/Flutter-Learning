@@ -1,6 +1,8 @@
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:sample_flutter/pages/first_page.dart';
+import 'package:sample_flutter/pages/second_page.dart';
 
 void main() {
   //runApp(const MyListViewApp());
@@ -9,16 +11,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   MyApp({super.key});
-  List<String> lst = [
-    "one",
-    "two",
-    "three",
-    "four",
-    "five",
-    "six",
-    "seven",
-    "Eight"
-  ];
   void onTapped() {
     if (kDebugMode) {
       print("tapped");
@@ -26,9 +18,13 @@ class MyApp extends StatelessWidget {
   }
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FirstPage()
+      home: const FirstPage(),
+      routes: {
+        "/secondpage": (context) => const SecondPage(),
+        "/firstpage": (context) => const FirstPage()
+      },
     );
   }
 // called this method to like home: AppBarWithClickableView()
