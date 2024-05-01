@@ -11,6 +11,35 @@ class FirstPage extends StatelessWidget {
         title: const Text("1st Page"),
         backgroundColor: Colors.blue,
       ),
+      drawer: Drawer(
+        backgroundColor: Colors.orange,
+        child: Column(
+            children: [
+              DrawerHeader(child: Icon(Icons.view_sidebar_outlined, size: 100)),
+              ListTile(
+                leading: Icon(Icons.home),
+                title: Text("H O M E"),
+                onTap: () {
+                  Navigator.pushNamed(context, "/homePage");
+                },
+              ),
+               ListTile(
+                leading: Icon(Icons.settings),
+                title: Text("Setting"),
+                  onTap: () {
+                    Navigator.pushNamed(context, "/settingsPage");
+                  }
+              ),
+              const ListTile(
+                leading: Icon(Icons.contact_emergency),
+                title: Text("Contact"),
+              ),
+              const ListTile(
+                leading: Icon(Icons.more),
+                title: Text("More"),
+              )
+            ]),
+      ),
       backgroundColor: Colors.white,
       body: Center(
         child: ElevatedButton(
