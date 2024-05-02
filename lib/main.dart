@@ -2,7 +2,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:sample_flutter/pages/first_page.dart';
+import 'package:sample_flutter/pages/homePage.dart';
 import 'package:sample_flutter/pages/second_page.dart';
+import 'package:sample_flutter/pages/settingsPage.dart';
 
 void main() {
   //runApp(const MyListViewApp());
@@ -22,8 +24,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const FirstPage(),
       routes: {
-        "/secondpage": (context) => const SecondPage(),
-        "/firstpage": (context) => const FirstPage()
+        "/secondPage": (context) => const SecondPage(),
+        "/firstPage": (context) => const FirstPage(),
+        "/homePage": (context) => HomePage(),
+        "/settingsPage": (context) => SettingsPage(),
       },
     );
   }
