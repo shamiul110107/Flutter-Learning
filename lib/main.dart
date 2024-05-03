@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:sample_flutter/pages/first_page.dart';
 import 'package:sample_flutter/pages/homePage.dart';
+import 'package:sample_flutter/pages/profilePage.dart';
 import 'package:sample_flutter/pages/second_page.dart';
 import 'package:sample_flutter/pages/settingsPage.dart';
 
@@ -22,12 +23,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const FirstPage(),
+      home: FirstPage(),
       routes: {
         "/secondPage": (context) => const SecondPage(),
-        "/firstPage": (context) => const FirstPage(),
-        "/homePage": (context) => HomePage(),
-        "/settingsPage": (context) => SettingsPage(),
+        "/firstPage": (context) => FirstPage(),
+        "/homePage": (context) => HomePage("drawer"),
+        "/settingsPage": (context) => SettingsPage("drawer"),
+        "/profilePage": (context) => ProfilePage("drawer"),
       },
     );
   }
