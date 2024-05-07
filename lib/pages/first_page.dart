@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:sample_flutter/pages/Calculator.dart';
 import 'package:sample_flutter/pages/homePage.dart';
 import 'package:sample_flutter/pages/profilePage.dart';
 import 'package:sample_flutter/pages/second_page.dart';
@@ -25,7 +26,7 @@ class _FirstPageState extends State<FirstPage> {
   Widget build(BuildContext context) {
     final List page = [
       HomePage("homePage"),
-      SettingsPage("firstPage"),
+      Calculator(),
       ProfilePage("profilePage")
     ];
     return Scaffold(
@@ -54,14 +55,6 @@ class _FirstPageState extends State<FirstPage> {
                 Navigator.pop(context);
                 Navigator.pushNamed(context, "/settingsPage");
               }),
-          const ListTile(
-            leading: Icon(Icons.contact_emergency),
-            title: Text("Contact"),
-          ),
-          const ListTile(
-            leading: Icon(Icons.more),
-            title: Text("More"),
-          )
         ]),
       ),
       backgroundColor: Colors.white,
@@ -72,7 +65,7 @@ class _FirstPageState extends State<FirstPage> {
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.settings), label: "Settings"),
+              icon: Icon(Icons.calculate), label: "Calculator"),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
         ],
       ),

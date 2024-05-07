@@ -1,6 +1,7 @@
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:sample_flutter/pages/Calculator.dart';
 import 'package:sample_flutter/pages/first_page.dart';
 import 'package:sample_flutter/pages/homePage.dart';
 import 'package:sample_flutter/pages/profilePage.dart';
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         "/homePage": (context) => HomePage("drawer"),
         "/settingsPage": (context) => SettingsPage("drawer"),
         "/profilePage": (context) => ProfilePage("drawer"),
+        "/calculatorPage": (context) => Calculator()
       },
     );
   }
