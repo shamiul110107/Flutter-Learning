@@ -7,6 +7,7 @@ import 'package:sample_flutter/pages/homePage.dart';
 import 'package:sample_flutter/pages/profilePage.dart';
 import 'package:sample_flutter/pages/second_page.dart';
 import 'package:sample_flutter/pages/settingsPage.dart';
+import 'package:sample_flutter/pages/todo_page.dart';
 
 void main() {
   //runApp(const MyListViewApp());
@@ -31,7 +32,8 @@ class MyApp extends StatelessWidget {
         "/homePage": (context) => HomePage("drawer"),
         "/settingsPage": (context) => SettingsPage("drawer"),
         "/profilePage": (context) => ProfilePage("drawer"),
-        "/calculatorPage": (context) => Calculator()
+        "/calculatorPage": (context) => Calculator(),
+        "/todolist": (context) => ToDoList(),
       },
     );
   }
