@@ -8,25 +8,30 @@ class ToDoList extends StatefulWidget {
 }
 
 class _ToDoListState extends State<ToDoList> {
-  TextEditingController controller = TextEditingController();
-  void onPressed() {
+  List todoList = [
+    ["Make Turorial", false],
+    ["Do Exercise", false]
+  ];
+  void checkBoxChanged(bool? value, int index) {
     setState(() {
+      todoList[index][1] = !todoList[index][1];
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.yellow[200],
-      appBar: AppBar(
-          backgroundColor: Colors.yellow,
-          title: Text('To Do')
-      ),
-      body: ListView(
-        children: [
-          TodoTile(),
-          TodoTile(),
-          TodoTile()
-        ],
+      appBar:
+          AppBar(backgroundColor: Colors.yellow, title: const Text('To Do')),
+      body: ListView.builder(
+        itemCount: todoList.length,
+        itemBuilder: (context, index) {
+          return TodoTile(
+              taskName: todoList[index][0],
+              taskCompleted: todoList[index][1],
+              onChanged: (value) => checkBoxChanged(value, index));
+        },
       ),
     );
   }
