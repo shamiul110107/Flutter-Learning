@@ -55,6 +55,13 @@ class _FirstPageState extends State<FirstPage> {
                 Navigator.pop(context);
                 Navigator.pushNamed(context, "/settingsPage");
               }),
+          ListTile(
+              leading: Icon(Icons.work),
+              title: Text("To Do"),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, "/todolist");
+              }),
         ]),
       ),
       backgroundColor: Colors.white,
