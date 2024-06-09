@@ -1,7 +1,6 @@
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:hive_flutter/hive_flutter.dart';
 import 'package:sample_flutter/pages/Calculator.dart';
 import 'package:sample_flutter/pages/first_page.dart';
 import 'package:sample_flutter/pages/homePage.dart';
@@ -11,8 +10,6 @@ import 'package:sample_flutter/pages/settingsPage.dart';
 import 'package:sample_flutter/pages/todo_page.dart';
 
 void main() async {
-  await Hive.initFlutter();
-  await Hive.openBox('myBox');
   //runApp(const MyListViewApp());
   runApp(MyApp());
 }
